@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,7 +12,9 @@ body {
     font-family: "Inter", Helvetica, Arial, sans-serif;
 }
 
-/* ---------------------------- HEADER ---------------------------- */
+/* ----------------------------- HOME ----------------------------- */
+
+/* ---------------------------- Header ---------------------------- */
 
 header {
     background-color: #944547;
@@ -62,9 +64,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-/* ---------------------------- CONTENT ---------------------------- */
+/* ---------------------------- Content ---------------------------- */
 
 h1 {
     text-align: center;
@@ -83,4 +86,72 @@ h1 span:last-child {
 
 h2 {
     text-align: center;
+}
+
+/* --------------------------- ABOUT US --------------------------- */
+
+.about-us#content {
+    background-image: url("grey-kitty-with-monochrome-wall-her-min.jpg");
+}
+
+.about-us.page-title-container {
+    padding: 40px 0 65px 0;
+}
+
+h2.about-us {
+    font-family: "Bevan", Helvetica, Arial, sans-serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.about-us-row {
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-us-row:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.about-us-row .image-container {
+    position: relative;
+    display: inline-block; /* Or use 'block', depending on your layout */
+    /* overflow: hidden; */
+}
+
+.about-us-row img {
+    display: block; /* Removes bottom space/margin under the image */
+    width: 50vw; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.about-us-row#row-2 .image-container::after {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, rgba(240, 240, 240, 1) 100%);
+}
+
+.about-us-row .text-container {
+    padding: 0 25px;
+    min-height: 100%;
+}
+
+.about-us-row#row-2 {
+    background-color: #f0f0f0;
+}
+
+.about-us-row p {
+    font-size: 1.2rem;
+    line-height: 26px;
+    margin: 0;
 }
